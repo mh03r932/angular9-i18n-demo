@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "langDemo": {
@@ -13,6 +13,13 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "de-CH": "src/locale/messages.de-ch.xlf",
+          "fr-CH": "src/locale/messages.fr-ch.xlf"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -60,7 +67,14 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "de-CH": {
+              "localize": ["de-CH"]
+            },
+            "fr-CH": {
+              "localize": ["fr-CH"]
             }
+
           }
         },
         "serve": {
@@ -71,6 +85,12 @@
           "configurations": {
             "production": {
               "browserTarget": "langDemo:build:production"
+            },
+            "de-CH": {
+              "browserTarget": "langDemo:build:de-CH"
+            },
+            "fr-CH": {
+              "browserTarget": "langDemo:build:fr-CH"
             }
           }
         },
