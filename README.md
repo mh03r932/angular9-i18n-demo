@@ -1,11 +1,11 @@
 # LangDemo
 
-Demo to show off Angular9 localization setup
+Demo to show off Angular 9 localization setup
 
 Run `ng build --prod --localize` to produce all languages in the dist directory
 
 
-Run `ng serve --configuration=de-FR` to serve the French Translation
+Run `ng serve --configuration=de-FR` to serve the French translation
 
 
 
